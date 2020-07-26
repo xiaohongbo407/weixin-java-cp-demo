@@ -1,23 +1,47 @@
 logging:
-  level:
-    org.springframework.web: INFO
-    com.github.binarywang.demo.wx.cp: DEBUG
-    me.chanjar.weixin: DEBUG
+    level:
+        org.springframework.web: INFO
+        com.github.binarywang.demo.wx.cp: DEBUG
+        me.chanjar.weixin: DEBUG
+
 wechat:
-  cp:
-    corpId: wwe3f9ee4332f7775d
-    appConfigs:
-      - agentId: 1000020
-        secret: XpHQUAylBcb80mAe9iTI49TSjJvkevUwZvPpNCxAvXU
-        token:
-        aesKey:
-  tp:
-    corpId: wwe3f9ee4332f7775d
-    suiteConfigs:
-       - suiteId: wwf54e9b52379d58b4
-         suiteSecret: HrQeiQyASLDNto2eKiWLN0gUbutr-D4XewCnW71EJDI
-         token: 87W5DVqJVKCxkRdS7Xr82g2WI2
-         aesKey: ZzBZTTB1RQhBlVECMi1vnTO83khS2qStXpKr8hzs144
+    cp:
+        corpId: wwe3f9ee4332f7775d
+        appConfigs:
+            -   agentId: 1000020
+                secret: XpHQUAylBcb80mAe9iTI49TSjJvkevUwZvPpNCxAvXU
+                token:
+                aesKey:
+    tp:
+        corpId: wwe3f9ee4332f7775d
+        suiteConfigs:
+            -   suiteId: wwf54e9b52379d58b4
+                suiteSecret: HrQeiQyASLDNto2eKiWLN0gUbutr-D4XewCnW71EJDI
+                token: 87W5DVqJVKCxkRdS7Xr82g2WI2
+                aesKey: ZzBZTTB1RQhBlVECMi1vnTO83khS2qStXpKr8hzs144
+
+jwt:
+    tokenHeader: accessToken
+    authHeader: authorities
+    tokenPrefix: Bearer
+    secret: w0H2WrcKu33x9zDzVPsKZO5Z
+    #minutes
+    expiration: 60
+    antMatchers:
+        - /index
+        - /security/noauth
+        - /swagger/**
+        - /webjars/**
+        - /swagger-resources/**
+        - /v2/api-docs
+        - /**/*.html
+        - /exception/**
+        - /lombok
+        - /api/**
+        - /jpa/**
+        - /mybatis/**
+        - /redis/**
+        - /mongo/**
 
 server:
-  port: 8000
+    port: 8000
