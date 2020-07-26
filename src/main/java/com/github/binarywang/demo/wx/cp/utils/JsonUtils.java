@@ -19,10 +19,21 @@ public class JsonUtils {
   public static String toJson(Object obj) {
     try {
       return JSON.writeValueAsString(obj);
+
+
     } catch (JsonProcessingException e) {
       e.printStackTrace();
     }
 
     return null;
+  }
+
+  public static  <T> T  toObject(String json,Class<T> valueType) throws JsonProcessingException {
+      try {
+          Object object = JSON.readValue(json, valueType);
+      } catch (JsonProcessingException e) {
+          e.printStackTrace();
+      }
+      return null;
   }
 }

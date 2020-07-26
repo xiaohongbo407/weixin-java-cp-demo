@@ -1,8 +1,8 @@
 package com.github.binarywang.demo.wx.cp.security.config;
 
-import cn.net.sexygirls.entity.Menu;
-import cn.net.sexygirls.entity.Role;
-import cn.net.sexygirls.utils.security.UrlMatcher;
+import com.github.binarywang.demo.wx.cp.security.entity.Menu;
+import com.github.binarywang.demo.wx.cp.security.entity.Role;
+import com.github.binarywang.demo.wx.cp.security.utils.UrlMatcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;
 import org.springframework.security.access.SecurityConfig;

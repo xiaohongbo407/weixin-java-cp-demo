@@ -1,7 +1,7 @@
 package com.github.binarywang.demo.wx.cp.security.handler;
 
 
-import cn.net.sexygirls.utils.common.ResponseUtil;
+import com.github.binarywang.demo.wx.cp.security.utils.ResponseUtil;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;

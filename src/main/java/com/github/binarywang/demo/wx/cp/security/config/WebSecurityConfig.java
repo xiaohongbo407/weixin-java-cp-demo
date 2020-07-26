@@ -105,7 +105,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             //对请求进行认证
             //url认证配置顺序为：1.先配置放行不需要认证的 permitAll() 2.然后配置 需要特定权限的 hasRole() 3.最后配置 anyRequest().authenticated()
             .authorizeRequests()
-            .antMatchers(JwtTokenUtil.antMatchers.split(",")).permitAll()
+            .antMatchers(JwtTokenUtil.antMatchers).permitAll()
             //其他请求都需要进行认证,认证通过够才能访问
             // 待考证：如果使用重定向 httpServletRequest.getRequestDispatcher(url).forward(httpServletRequest,httpServletResponse); 重定向跳转的url不会被拦截（即在这里配置了重定向的url需要特定权限认证不起效），但是如果在Controller 方法上配置了方法级的权限则会进行拦截
             .anyRequest().authenticated()

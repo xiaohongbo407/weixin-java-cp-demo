@@ -1,8 +1,8 @@
 package com.github.binarywang.demo.wx.cp.security.config;
 
-import cn.net.sexygirls.entity.Menu;
-import cn.net.sexygirls.entity.Role;
-import cn.net.sexygirls.entity.User;
+import com.github.binarywang.demo.wx.cp.security.entity.Menu;
+import com.github.binarywang.demo.wx.cp.security.entity.Role;
+import com.github.binarywang.demo.wx.cp.security.entity.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

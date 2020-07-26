@@ -1,9 +1,9 @@
 package com.github.binarywang.demo.wx.cp.security.handler;
 
 
-import cn.net.sexygirls.security.config.SecurityUserDetails;
-import cn.net.sexygirls.utils.common.ResponseUtil;
-import cn.net.sexygirls.utils.security.JwtTokenUtil;
+import com.github.binarywang.demo.wx.cp.security.config.JwtTokenUtil;
+import com.github.binarywang.demo.wx.cp.security.config.SecurityUserDetails;
+import com.github.binarywang.demo.wx.cp.security.utils.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;

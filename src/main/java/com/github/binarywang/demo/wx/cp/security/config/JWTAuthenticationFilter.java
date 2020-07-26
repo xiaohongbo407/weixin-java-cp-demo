@@ -1,15 +1,12 @@
 package com.github.binarywang.demo.wx.cp.security.config;
 
-import cn.net.sexygirls.exception.BaseException;
-import cn.net.sexygirls.utils.common.ResponseUtil;
-import cn.net.sexygirls.utils.security.JwtTokenUtil;
-import com.alibaba.fastjson.JSONObject;
+import com.github.binarywang.demo.wx.cp.security.utils.ResponseUtil;
+import com.github.binarywang.demo.wx.cp.utils.JsonUtils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -89,7 +86,7 @@ public class JWTAuthenticationFilter extends BasicAuthenticationFilter {
                 String authority = claims.get(JwtTokenUtil.authHeader).toString();
                 if(!StringUtils.isEmpty(authority)){
                     //authority="[{"authority":"common"}]"
-                    List<Map<String,String>> authrityMap =JSONObject.parseObject(authority, List.class);
+                    List<Map<String,String>> authrityMap = JsonUtils.toObject(authority, List.class);
                     for(Map<String,String> role : authrityMap){
                         if(!StringUtils.isEmpty(role)) {
                             authorities.add(new SimpleGrantedAuthority(role.get("authority")));

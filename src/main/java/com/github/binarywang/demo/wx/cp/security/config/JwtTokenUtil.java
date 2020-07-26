@@ -41,7 +41,7 @@ public class JwtTokenUtil {
     /**
      * 不需要认证的接口
      */
-    public static String antMatchers;
+    public static String[] antMatchers;
 
     /**
      * @Description:利用Jwts生成token
@@ -87,7 +87,7 @@ public class JwtTokenUtil {
        JwtTokenUtil.tokenExpireTime = tokenExpireTime;
     }
     @Value("${jwt.antMatchers}")
-    public void setAntMatchers(String antMatchers) {
+    public void setAntMatchers(String[] antMatchers) {
        JwtTokenUtil.antMatchers = antMatchers;
     }
 }

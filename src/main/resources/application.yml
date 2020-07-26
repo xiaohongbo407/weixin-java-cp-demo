@@ -27,21 +27,7 @@ jwt:
     secret: w0H2WrcKu33x9zDzVPsKZO5Z
     #minutes
     expiration: 60
-    antMatchers:
-        - /index
-        - /security/noauth
-        - /swagger/**
-        - /webjars/**
-        - /swagger-resources/**
-        - /v2/api-docs
-        - /**/*.html
-        - /exception/**
-        - /lombok
-        - /api/**
-        - /jpa/**
-        - /mybatis/**
-        - /redis/**
-        - /mongo/**
+    antMatchers: /index,/security/noauth,/swagger/**, /webjars/**,/swagger-resources/**,/v2/api-docs,/**/*.html,/exception/**, /lombok,/api/**,/jpa/**,/mybatis/**,/redis/**,/mongo/**
 
 server:
     port: 8000

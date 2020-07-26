@@ -1,6 +1,6 @@
 package com.github.binarywang.demo.wx.cp.security.handler;
 
-import cn.net.sexygirls.utils.common.ResponseUtil;
+import com.github.binarywang.demo.wx.cp.security.utils.ResponseUtil;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.core.AuthenticationException;

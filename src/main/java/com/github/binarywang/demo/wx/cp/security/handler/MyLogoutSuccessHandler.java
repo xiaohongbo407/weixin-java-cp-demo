@@ -1,6 +1,6 @@
 package com.github.binarywang.demo.wx.cp.security.handler;
 
-import cn.net.sexygirls.utils.common.ResponseUtil;
+import com.github.binarywang.demo.wx.cp.security.utils.ResponseUtil;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
